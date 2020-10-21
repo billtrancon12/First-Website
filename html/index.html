@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main_content.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/global_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Naruto World</title>
+</head>
+<body>
+    <header class="Navigation_menu">
+        <nav class='Homepage'></nav>
+        <div id="user_menu">
+            <div class="arrow-cursor-pointer">
+                <button class="arrow"><i class="arrow down" id="arrow"></i></span>
+                <div class="dropdown_content">
+                    <ul class="list-of-dropdown_contents"></ul>
+                </div>
+            </div>
+            <button class="user_icon"><i class="fa fa-user"></i></button>
+        </div>
+        <div id="searching-category">
+            <form action="../php/searching.php" method="POST">
+                <button type="submit" class="search_icon"><i class="fa fa-search"></i></button>
+                <input type="text" name="search" placeholder="Searching" id="search">
+            </form>
+        </div>
+    </header>
+    <div id="MyContent">
+        <div id='main_content'>
+            <h1 class='all_characters'>Characters</h1>
+            <div id="category_of-all-characters"></div>
+            <div id="category_of-pages"></div>
+        </div>
+    </div>  
+    <footer class="wds-global-footer">
+        <a class="wds-global-footer-naruto_world" title="Naruto World" data-tracking-label="logo">Naruto World</a>
+        <ul class="wds-global-footer-naruto_world_links" style="list-style-type: none;"></ul>
+    </footer>
+    <script src='../script/index.js'></script>
+    <script src="../script/global_footer.js"></script>
+    <script src="../script/users.js"></script> 
+    <script>
+        localStorage.setItem("Login","0")
+        createHomePageMenu()
+    </script>  
+    <script>
+        let character = JSON.parse(localStorage.getItem("Retrieve data"))
+        createCharacter(character,1)
+    </script>
+    <script>
+        //Create a ul for page
+        let ulistPage = document.createElement('ul')
+        ulistPage.setAttribute('class','list_of-all-pages')
+        ulistPage.setAttribute('style','list-style-type:none')
+        document.getElementById('category_of-pages').appendChild(ulistPage)
+                    
+        for(numbPage =1;numbPage<=26;numbPage++){
+            createPgNum(numbPage)
+        }
+    </script>
+    <script>
+        createNarutoWorld()
+        createTitle()
+        createContent("About",1)
+        createContent("Support",2)
+        createContent("Term Of Use",3)        
+    </script>
+    <script>
+        createUserDropdown(localStorage.getItem("Login"))
+    </script>
+</body>
+</html>
