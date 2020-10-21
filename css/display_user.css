@@ -1,0 +1,27 @@
+.wds-update_account-field{
+    display: inline-block;
+    width: 60%;
+}
+
+button.temporary_button{
+    position: absolute;
+}
+
+button#name_button{
+    top: 140px;
+    left: 323px;
+}
+
+button#birthdate_button{
+    top: 261px;
+    left: 345px;
+}
+
+button#email_button{
+    top: 382px;
+    left: 323px;
+}
+button#phone_number_button{
+    top: 503px;
+    left: 378px;
+}

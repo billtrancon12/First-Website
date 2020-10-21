@@ -1,0 +1,45 @@
+.wds-global-footer{
+    background-color: #152238;
+    text-align: center;
+    margin: 0;
+    height: 106px;
+}
+
+.wds-global-footer-naruto_world{
+    text-align: center;
+    color: #21b6ab;
+    margin: 0;
+    font-size: 220%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wds-global-footer-naruto_world_links{
+    list-style-type: none;
+}
+
+.wds-global-footer-naruto_world_link{
+    color: #21b6ab;
+    display: inline-block;
+    font-size: 135%;
+}
+
+.wds-global-footer-naruto_world_link::after{
+    margin: 5px;
+    content: "~";
+}
+
+.wds-global-footer-naruto_world_links li:last-child::after{
+    content: none;
+}
+
+.wds-global-footer-naruto_world_link a:link{
+    color: #21b6ab;
+    text-decoration: none;
+}
+
+.wds-global-footer-naruto_world_link a:visited{
+    color: #21b6ab;
+    text-decoration: none;
+}
